@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Course Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-primary text-dark">
+
+<br>
+<!-- Design Introduction -->
+<section class="design-intro text-center mb-8 container">
+    <div class="content">
+        <h2 class="mb-4">Design Introduction</h2>
+        <h1 class="text-4xl font-bold mb-4">The Essence of Design</h1>
+        <p class="leading-relaxed text-lg mb-6">
+            <span class="highlighted-text">Design</span> is the process of creating solutions to problems. It is present in various aspects of our lives and aims to help people overcome challenges or fulfill their needs.
+        </p>
+        <p class="leading-relaxed text-lg mb-6">
+            Design can take many forms and is not limited to visual aesthetics. It involves considering the user’s perspective and prioritizing their needs over personal preferences. It is important to approach design with an open mind and be receptive to feedback and suggestions.
+        </p>
+        <p class="leading-relaxed text-lg mb-6">
+            While designers have the creative freedom to express their ideas, it is crucial to remember that the ultimate goal is to provide value to users. Their perspectives and interpretations matter, and the focus should be on creating designs that cater to their requirements.
+        </p>
+        <p class="leading-relaxed text-lg">
+            In a nutshell, <span class="highlighted-text">design</span> is like a clever buddy who’s always ready to make your life better.
+        </p>
+    </div>
+    <aside>
+        <img class="asideImg" src="assets/whatisdesign.webp" alt="What is Design">
+    </aside>
+</section>
+
+<br>
+<div class="container flex flex-col md:flex-row my-8 bg-primary">
+    <!-- Registration Form -->
+    <div id="registration-form" class="w-full md:w-2/3 bg-primary text-dark p-8 rounded-lg">
+        <h2 class="text-2xl text-primary font-bold mb-4">Course Registration Form</h2>
+        <form id="contact-form">
+            <div class="mb-4">
+                <label class="block text-dark text-sm font-bold mb-2" for="name">Full Name</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-dark leading-tight focus:outline-none focus:shadow-outline"
+                    id="name" type="text" placeholder="Your Full Name" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-dark text-sm font-bold mb-2" for="email">Email Address</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-dark leading-tight focus:outline-none focus:shadow-outline"
+                    id="email" type="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-dark text-sm font-bold mb-2" for="phone">Phone</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-dark leading-tight focus:outline-none focus:shadow-outline"
+                    id="phone" type="tel" placeholder="Phone" required>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-dark text-sm font-bold mb-2" for="comments">Additional Comments</label>
+                <textarea id="comments" class="shadow appearance-none border rounded w-full py-2 px-3 text-dark leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Any additional information..."></textarea>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-dark text-sm font-bold mb-2">Course Image</label>
+                <img id="course-image" src="assets/courseimage.png" alt="Course Image" class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+
+            <div class="flex items-center justify-between">
+                <button class="bg-accent hover:text-accent hover:bg-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    Register
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Payment Method -->
+    <div id="payment-method-form" class="w-full md:w-2/3 bg-primary text-primary p-8 rounded-lg hidden">
+        <h2 class="text-2xl font-bold mb-4">Payment Method</h2>
+        <form id="payment-form">
+            <!-- Radio Button Options -->
+            <div class="mb-6">
+                <label class="flex items-center space-x-3 p-3 border rounded-lg bg-white shadow-md hover:bg-gray-100 transition duration-200 ease-in-out">
+                    <input type="radio" class="form-radio text-primary h-5 w-5 focus:ring-primary" name="payment-method" value="qr-code" required>
+                    <span class="text-lg font-medium text-gray-800">QR Code</span>
+                </label>
+            </div>
+            <div class="mb-6">
+                <label class="flex items-center space-x-3 p-3 border rounded-lg bg-white shadow-md hover:bg-gray-100 transition duration-200 ease-in-out">
+                    <input type="radio" class="form-radio text-primary h-5 w-5 focus:ring-primary" name="payment-method" value="cash">
+                    <span class="text-lg font-medium text-gray-800">Cash</span>
+                </label>
+            </div>
+            <div class="mb-6">
+                <label class="flex items-center space-x-3 p-3 border rounded-lg bg-white shadow-md hover:bg-gray-100 transition duration-200 ease-in-out">
+                    <input type="radio" class="form-radio text-primary h-5 w-5 focus:ring-primary" name="payment-method" value="bank-transfer">
+                    <span class="text-lg font-medium text-gray-800">Bank Transfer</span>
+                </label>
+            </div>
+
+            <div id="selected-payment-method" class="mb-4 text-lg font-bold text-primary"></div>
+            <div id="payment-instructions" class="text-sm text-dark bg-primary">
+                <p>Please bring cash to the course venue on the first day of the course. Make sure to keep the receipt for confirmation.</p>
+            </div>
+
+            <div id="qr-code" class="hidden">
+                <p>Scan this QR code to make your payment:</p>
+                <br><hr><br>
+                <center>
+                    <img src="assets/bankqrcode.png" alt="QR Code">
+                </center>
+                <br><hr><br>
+            </div>
+
+            <div id="bank-transfer" class="hidden">
+                <div class="mb-4">
+                    <label for="bankRib" class="block text-sm font-medium text-gray-700">Bank RIB (20 characters):</label>
+                    <input type="text" id="bankRib" name="bankRib" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary sm:text-sm" height="15px">
+                </div>
+                <button type="button" id="verify-bank" class="bg-accent hover:bg-white text-dark font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Verify Bank Details
+                </button>
+                <div id="bank-account-details" class="hidden">
+                    <h2 class="text-2xl text-primary font-bold mb-4">Bank Transfer Details:</h2>
+                    <img id="bank-account-image" src="assets/BankAccount.png" alt="Bank Account Details" style="width: 70%; height: auto; cursor: pointer;">
+                </div>
+            </div>
+
+            <input type="hidden" id="payment-method-hidden" name="payment-method-hidden">
+
+            <br>
+            <div class="flex items-center justify-between">
+                <button class="back-button font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="goBack()">
+                    Back
+                </button>
+                <button class="bg-accent hover:bg-white text-dark font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Submit Payment
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Side Panel -->
+    <aside class="w-full md:w-1/3 bg-accent text-dark p-8 rounded-lg shadow-lg md:ml-8 mt-8 md:mt-0">
+        <h2 class="text-2xl font-bold text-primary mb-4">Why Join Our Design Course?</h2>
+        <ul class="list-disc pl-5 mb-8">
+            <li class="mb-2">Learn from Google Cheat Sheet</li>
+            <li class="mb-2">Hands-on projects</li>
+            <li class="mb-2">Team Work and Communication</li>
+            <li class="mb-2">Discovering your Opportunities</li>
+            <li class="mb-2">Access to exclusive resources</li>
+        </ul>
+
+        <!-- Carousel -->
+        <div class="carousel" style="width: 100%;">
+            <div><img width="100%" src="assets/creatingsoulotions to problems.webp" alt="Image 1"></div>
+            <div><img width="100%" src="assets/Dieter Rams’ 10 Principles of Good Design.webp" alt="Image 2"></div>
+            <div><img width="100%" src="assets/steaveaboutdesign.webp" alt="Image 3"></div>
+            <div><img width="100%" src="assets/whatmakesadesigngoodorbad.webp" alt="Image 4"></div>
+        </div>
+
+        <!-- Course Details & Contact Information -->
+        <section class="bg-primary text-dark p-8 rounded-lg shadow-lg mt-8">
+            <h2 class="text-2xl font-bold text-primary mb-4">Course Details & Contact Information</h2>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-bold text-orange mb-2">Instructor</h3>
+                <p>Name: Ali Cheikh</p>
+                <p>Email: contact@ali-cheikh.com</p>
+                <p>Phone: (90) 725-434</p>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-bold text-orange mb-2">Location</h3>
+                <p>Sfax, Tunisia</p>
+                <p>El Arwika, sfax 3085</p>
+                <p>TN</p>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-bold text-orange mb-2">Course Schedule</h3>
+                <p>Start Date: September 27, 2024</p>
+                <p>End Date: September 30, 2024</p>
+                <p>Time: 9:30 PM - 14:30 PM</p>
+            </div>
+        </section>
+    </aside>
+</div>
+
+        <!-- Footer -->
+        <footer class="bg-accent text-dark p-4 mt-8">
+            <p class="text-center text-sm">&copy; 2024 Design Course. All rights reserved.</p>
+        </footer>
+    
+        <!-- Scripts -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

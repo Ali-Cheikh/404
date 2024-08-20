@@ -1,0 +1,140 @@
+        /* Custom colors from your palette */
+        .bg-primary { background-color: #fdf6eb; }
+        .text-primary { color: #226160; }
+        .bg-accent { background-color: #d0a465; }
+        .text-accent { color: #a95f4d; }
+        .text-dark { color: #050505; }
+
+        /* Carousel Styles */
+        .slick-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+        .slick-prev, .slick-next {
+            display: block; /* Ensure arrows are visible */
+            color: #226160; /* Arrow color */
+        }
+        .slick-prev::before, .slick-next::before {
+            font-size: 24px; /* Arrow size */
+        }
+        .slick-dots li button:before {
+            color: #226160; /* Dot color */
+        }
+
+        /* Rectangular Radio Buttons */
+        .form-radio {
+            border-radius: 0; /* Remove border radius for rectangular shape */
+        }
+        .form-radio:checked {
+            background-color: #226160; /* Checked state color */
+            border-color: #226160; /* Border color when checked */
+        }
+
+        /* Rectangular image styling */
+        .carousel img {
+            height: 200px; /* Adjust height for rectangle */
+            object-fit: cover; /* Ensure images cover the area without distortion */
+        }
+
+        /* Hide elements */
+        .hidden { display: none; }
+
+        /* Back Button */
+        .back-button {
+            background-color: #fdf6eb;
+            color: #226160;
+            border: 1px solid #226160;
+        }
+        .back-button:hover {
+            background-color: #226160;
+            color: #fdf6eb;
+        }
+
+        /* Payment Instructions */
+        #payment-instructions {
+            display: none;
+            margin-top: 1rem;
+            padding: 1.5rem;
+            border: 1px solid #226160;
+            border-radius: 0.5rem;
+            background-color: #feb47b;
+        }
+        .design-intro {
+            position: relative;
+            padding: 4rem;
+            background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+            color: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            display: flex; /* Use flexbox for layout */
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allow content to wrap */
+        }
+
+        .design-intro::before {
+            content: '';
+            position: absolute;
+            top: -3rem;
+            right: -3rem;
+            width: 12rem;
+            height: 12rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .design-intro::after {
+            content: '';
+            position: absolute;
+            bottom: -2rem;
+            left: -2rem;
+            width: 8rem;
+            height: 8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .highlighted-text {
+            font-weight: bold;
+            color: #ffecd2;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.3rem;
+        }
+
+        /* Center container with max-width */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 1rem; /* Add some horizontal padding */
+        }
+
+        /* Content section styling */
+        .content {
+            width: 100%;/* Adjusted width to better fit within the design */
+            margin-right: 50px;
+            margin: 5%;
+            flex: 1;
+        }
+
+        /* Image styling */
+        .asideImg {
+            min-width: 365px;
+            max-width: 600px;
+            float: right;
+            flex: 1;
+        }
+        .container.flex{
+            border-left: dashed orangered;
+        }
+
+        .form-radio {
+            border-color: #D1D5DB; /* Gray border */
+            transition: border-color 0.2s ease;
+        }
+        .form-radio:checked {
+            border-color: #00ACA8; /* Primary color */
+        }
